@@ -1,4 +1,4 @@
-const faker = require('faker');
+const { faker } = require('@faker-js/faker');
 
 let minionIdCounter = 1;
 
@@ -14,7 +14,7 @@ const createMinion = () => {
 
   return {
     id: `${minionIdCounter++}`,
-    name: faker.name.findName(),
+    name: faker.name.fullName(),
     title: faker.name.jobTitle(),
     weaknesses: weaknesses,
     salary: 40000,
